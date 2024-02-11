@@ -3,22 +3,23 @@
 # setx AWS_SECRET_ACCESS_KEY your_secret_access_key
 # setx AWS_ACCESS_KEY_ID your_access_key_id
 
-import os
+#import os
 import boto3
 
 # Set up environment variables
-os.system("setx AWS_SECRET_ACCESS_KEY your_secret_access_key")
-os.system("setx AWS_ACCESS_KEY_ID your_access_key_id")
+#os.system("setx AWS_SECRET_ACCESS_KEY your_secret_access_key")
+#os.system("setx AWS_ACCESS_KEY_ID your_access_key_id")
 
 # Get the secret key and access key
-secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
-access_key = os.getenv('AWS_ACCESS_KEY_ID')
+#secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+#access_key = os.getenv('AWS_ACCESS_KEY_ID')
 
 # Create a connection to EC2
 ec2 = boto3.client('ec2',
                    region_name='us-east-1',
-                   aws_access_key_id=access_key,
-                   aws_secret_access_key=secret_key)
+                   #aws_access_key_id=access_key,
+                   #aws_secret_access_key=secret_key
+                   )
 
 # Create a new VPC
 response_vpc = ec2.create_vpc(CidrBlock='10.0.0.0/16')
