@@ -8,6 +8,3 @@ build:
       - /root/.pyenv/versions/3.9.16/bin/python3.9 -m pip install --upgrade pip  # Upgrade pip
 run:
   command: python Egg.py  # Update run command to execute Egg.py in the same path as YAML file
-environment:
-  variables:
-    LANG: en_US.UTF-8  # Set the LANG environment variable to en_US.UTF-8
