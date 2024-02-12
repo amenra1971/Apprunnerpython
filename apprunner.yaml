@@ -4,7 +4,7 @@ build:
   commands:
     build:
       - pip install pipenv
-      -  pipenv --python 3.11.8 install
+      -  pipenv --python /path/to/python3.11.8 install
 run:
   command: pipenv run python guess_the_number.py
 
