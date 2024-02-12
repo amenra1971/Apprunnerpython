@@ -1,8 +1,9 @@
-SchemaVersion: '1.0'
-Source:
-  Type: 'SERVICE'
-  Runtime: 'PYTHON'
-  BuildCommand: 'pip install -r requirements.txt'
-RuntimeEnvironment:
-  PYTHONVERSION: 'python-3.9'
-  STARTCOMMAND: 'gunicorn -w 4 -b 0.0.0.0:8000 egg:app'
+version: 1.0
+services:
+  - name: guess-the-number
+    source: 
+      type: service
+      runtime: python
+    run: 
+      command: python guess_the_number.py
+
