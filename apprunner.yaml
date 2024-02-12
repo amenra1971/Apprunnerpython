@@ -1,10 +1,12 @@
+# Example: https://docs.aws.amazon.com/apprunner/latest/dg/config-file-examples.html
 version: 1.0
 runtime: python3
 build:
   commands:
     build:
-      - pip install pipenv
-      - pipenv install
-      - /root/.pyenv/versions/3.9.16/bin/python3.9 -m pip install --upgrade pip  # Upgrade pip
+      - pip install -r requirements.txt
 run:
-  command: python Egg.py  # Update run command to execute Egg.py in the same path as YAML file
+  runtime-version: 3.8
+  command: uvicorn --host 0.0.0.0 --port 8080 --log-level info main:app
+  network:
+    port: 8080
