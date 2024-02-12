@@ -4,7 +4,7 @@ build:
   commands:
     build:
       - pip install pipenv
-      - pipenv --python "C:\Users\19195\AppData\Local\Microsoft\WindowsApps\python.exe" install
+      - pipenv --python "C:\\Users\\19195\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" install
 run:
   command: pipenv run python guess_the_number.py
 
