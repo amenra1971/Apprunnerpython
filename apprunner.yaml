@@ -1,10 +1,10 @@
 version: 1.0
-runtime: python3 
+runtime: python3
 build:
   commands:
     build:
       - pip install pipenv
-      - pipenv install 
-run: 
-  command: python guess_the_number.py
+      - pipenv install
+run:
+  command: pipenv run python guess_the_number.py
 
