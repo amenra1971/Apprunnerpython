@@ -61,4 +61,4 @@ async def move_eggs():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("egg2:app", host="0.0.0.0", port=8080, log_level="info")
+    uvicorn.run("egg:app", host="0.0.0.0", port=8080, log_level="info")
